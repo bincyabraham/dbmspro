@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Teacher Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+
+    <section>
+      <h3>Mark Attendance</h3>
+      <form id="attendanceForm">
+        <label>Subject: <input type="text" id="subject" required></label>
+        <label>Date: <input type="date" id="date" required></label>
+        <label>Roll No: <input type="text" id="rollno" required></label>
+        <label>Status:
+          <select id="status">
+            <option value="P">Present</option>
+            <option value="A">Absent</option>
+          </select>
+        </label>
+        <button type="submit">Save</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>View Attendance</h3>
+      <table border="1" id="attendanceTable">
+        <thead>
+          <tr>
+            <th>Roll No</th><th>Subject</th><th>Date</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
